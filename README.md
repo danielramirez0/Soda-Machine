@@ -62,7 +62,7 @@ If testing a class, a TestCase includes a setUp method that instantiates an obje
 8. return_inventory - 1 test
     - Instantiate a can and pass it into the method. Test that the len of self.inventory is now 31
 9. deposit_coins_into_register - 1 test
-    - Instantiate each of the 4 coins and append them to a list. Pass the list into the function, ensure the len of self.register is 92 user_interface module:
+    - Instantiate each of the 4 coins and append them to a list. Pass the list into the function, ensure the len of self.register is 92
 
 ## User_interface  (not a class, TestCases will not require a setUp method)
 
