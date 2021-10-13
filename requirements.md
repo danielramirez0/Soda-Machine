@@ -33,7 +33,7 @@
 
     - If there are sufficient resources to make the drink selected, then the program should prompt the user to insert coins.
     - Remember that quarters = $0.25, dimes = $0.10, nickles = $0.05, pennies = $0.01
-    - Calculate the monetary value of the coins inserted. 
+    - Calculate the monetary value of the coins inserted.
 
             e.g. 1 quarter, 2 dimes, 1 nickel, 2 pennies = 0.25 + 0.1 x 2 + 0.05 + 0.01 x 2 = $0.52
 
