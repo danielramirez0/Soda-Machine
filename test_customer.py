@@ -27,6 +27,11 @@ class TestGetWalletCoin(unittest.TestCase):
         returned_coin = self.customer.get_wallet_coin('Penny')
         self.assertEquals(returned_coin.value, .01)
 
+    def test_get_wallet_coin_list(self):
+        """Pass in a list, check to see if the wallet does not add items from a list"""
+        returned_coin = self.customer.get_wallet_coin(['Penny', 'Nickel'])
+        self.assertEqual(returned_coin, None)
+
 class TestAddCoinsToWallet(unittest.TestCase):
     """Tests the Customer class's add_coins_to_wallet"""
 
@@ -52,7 +57,22 @@ class TestAddCanToBackpack(unittest.TestCase):
         self.customer = customer.Customer()
 
     def test_add_one_can_tobackpack(self):
-        pass
+        """Adds one can to the backpack, checks to see if the length of the packpack list extends by one"""
+        self.customer.add_can_to_backpack('Cola')
+        self.assertEquals(len(self.customer.backpack.purchased_cans), 1)
+    
+    def test_add_two_can_tobackpack(self):
+        """Adds two can to the backpack, checks to see if the length of the packpack list extends by two"""
+        self.customer.add_can_to_backpack('Cola')
+        self.customer.add_can_to_backpack('Cola')
+        self.assertEquals(len(self.customer.backpack.purchased_cans), 2)
+
+    def test_add_three_can_tobackpack(self):
+        """Adds three can to the backpack, checks to see if the length of the packpack list extends by three"""
+        self.customer.add_can_to_backpack('Cola')
+        self.customer.add_can_to_backpack('Cola')
+        self.customer.add_can_to_backpack('Cola')
+        self.assertEquals(len(self.customer.backpack.purchased_cans), 3)
 
 if __name__ == '__main__':
     unittest.main()
