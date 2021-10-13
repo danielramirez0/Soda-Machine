@@ -29,7 +29,11 @@ If testing a class, a TestCase includes a setUp method that instantiates an obje
     - Pass in a list of 3 coins, test that the len of the customer’s wallet’s money list went up by 3
     - Pass in an empty list, test that the len of money list remained the same
 3. add_can_to_backpack – 3 tests
-    - Pass in a Cola object, test that the len of the customer’s backpack’s purhcased_cans list went up by 1 Wallet class: 1. fill_wallet
+    - Pass in a Cola object, test that the len of the customer’s backpack’s purhcased_cans list went up by 1 
+
+## Wallet class
+
+1. fill_wallet
     - Instantiate a Wallet object, test that its money list has a len of 88
 
 ## Soda Machine class
